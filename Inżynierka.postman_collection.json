@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "4f35e3cc-4375-40c0-968e-5f6694da579a",
+		"name": "Inżynierka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27051130"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQwLCJyb2xlIjoidXNlciIsImlhdCI6MTcwODk0ODQ4NywiZXhwIjoxNzA4OTUyMDg3fQ.VsoeOQjKVYgqY6fiQYUyTImiYwRbnC-59Bno_0F_ap4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/auth/admin"
+			},
+			"response": []
+		},
+		{
+			"name": "/verify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQwLCJyb2xlIjoidXNlciIsImlhdCI6MTcwODk0ODQ4NywiZXhwIjoxNzA4OTUyMDg3fQ.VsoeOQjKVYgqY6fiQYUyTImiYwRbnC-59Bno_0F_ap4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/auth/verify"
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"fName\",\r\n    \"lastName\": \"lName\",\r\n    \"email\": \"test@test.com\",\r\n    \"login\": \"userLogin\",\r\n    \"password\": \"!Pass123!\",\r\n    \"diet_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Ingredients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/ingredients/"
+			},
+			"response": []
+		},
+		{
+			"name": "Ingredients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/ingredients/"
+			},
+			"response": []
+		},
+		{
+			"name": "Diets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/diets/"
+			},
+			"response": []
+		},
+		{
+			"name": "Diets /find",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zwykła\",\r\n    \"calories\": 1600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/diets/find?name=Zwykła&calories=1400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"diets",
+						"find"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Zwykła"
+						},
+						{
+							"key": "calories",
+							"value": "1400"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Diets UID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/diets/uid"
+			},
+			"response": []
+		},
+		{
+			"name": "Diets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"trzecia dieta\",\r\n    \"calories\": 2500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/diets/"
+			},
+			"response": []
+		},
+		{
+			"name": "Dishes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/dishes/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Dishes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test obiad\",\r\n    \"description\": \"opis testowego obiadu\",\r\n    \"meal_time\": \"Dinner\",\r\n    \"macronutrients_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/dishes/"
+			},
+			"response": []
+		},
+		{
+			"name": "Macronutrients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/macronutrients/"
+			},
+			"response": []
+		},
+		{
+			"name": "Macronutrients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"calories\": 500,\r\n    \"fats\": 70,\r\n    \"carbohydrates\": 20,\r\n    \"proteins\": 10,\r\n    \"glycemic_index\": 1,\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/macronutrients/"
+			},
+			"response": []
+		},
+		{
+			"name": "Recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/recipes/"
+			},
+			"response": []
+		},
+		{
+			"name": "Recipes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dish_id\": 8,\r\n    \"ingredients_id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/recipes/"
+			},
+			"response": []
+		},
+		{
+			"name": "Dishes_history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/dishes_histories/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/generate-diet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/dishes_histories/generate-diet/"
+			},
+			"response": []
+		},
+		{
+			"name": "Dishes_history",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/dishes_histories/"
+			},
+			"response": []
+		},
+		{
+			"name": "Diet_has_dishes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/diet_has_dishes/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Diet_has_dishes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/diet_has_dishes/"
+			},
+			"response": []
+		}
+	]
+}
