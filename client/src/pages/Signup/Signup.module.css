@@ -1,0 +1,156 @@
+.signup_container {
+	width: 100%;
+	min-height: 100vh;
+	min-width: fit-content;
+	background-color: #222222;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.signup_form_container {
+	width: 700px;
+	height: 650px;
+	min-width: fit-content;
+	display: flex;
+	border-radius: 10px;
+	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.carousel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.carousel-item {
+	position: relative;
+}
+
+.dietText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 0;
+	border-radius: 5px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 22px;
+	padding: 10px 15px 0px 15px;
+}
+
+.form {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(120, 120, 120);
+	border-radius: 10px;
+}
+
+.form_container_inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(120, 120, 120);
+	border-radius: 10px;
+	font-size: 16px;
+	max-width: 400px;
+	max-height: 450px;
+	margin-bottom: 20px;
+}
+
+.form_container h1 {
+	font-size: 40px;
+	margin-top: 0;
+}
+
+.input {
+	outline: none;
+	border: none;
+	width: 100%;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #edf5f3;
+	margin: 5px 0;
+	font-size: 14px;
+}
+
+.error_msg {
+	width: 370px;
+	padding: 15px;
+	margin: 5px 0;
+	font-size: 14px;
+	background-color: #f34646;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.white_btn,
+.green_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: white;
+	border-radius: 20px;
+	width: 180px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.green_btn {
+	background-color: #3bb19b;
+	color: white;
+	margin: 10px;
+}
+
+.calories_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.calories_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.calories_buttons label {
+	margin: 5px;
+}
+
+.calories_buttons input[type="radio"] {
+	display: none;
+}
+
+.calories_buttons label {
+	display: inline-block;
+	background-color: white;
+	color: #3bb19b;
+	border: 2px solid #3bb19b;
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.calories_buttons label:hover {
+	background-color: #3bb19b;
+	color: white;
+}
+
+.calories_buttons input[type="radio"]:checked+label {
+	background-color: #3bb19b;
+	color: white;
+}
