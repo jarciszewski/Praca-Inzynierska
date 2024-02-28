@@ -26,5 +26,6 @@ server> npm start
 client> npm start
 ```
 
-Wszystkie diety mają takie same dane na ten moment, wygenerowanie losowych to kwestia wyczyszczenia tabeli dishes_histories i wysłanie  
-zapytania GET http://localhost:8080/api/dishes_histories/generate-diet/ lub ustawienie cron.schedule w dishes_historiesController.js na konkretną minutę i godzinę i odczekanie
+Wszystkie diety mają takie same dane na ten moment, wygenerowanie losowych to kwestia wyczyszczenia tabeli dishes_histories i  
+wysłanie zapytania GET http://localhost:8080/api/dishes_histories/generate-diet/ lub ustawienie  
+cron.schedule w dishes_historiesController.js na konkretną minutę i godzinę i odczekanie
