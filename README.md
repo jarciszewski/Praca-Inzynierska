@@ -2,9 +2,9 @@ Pobrać ZIPa
 W pliku config.json ustawić hosta i hasło bazy danych, pod które będzie łączył się serwer  
 Stworzyć plik konfiguracyjny .env i uzupełnić o dane:
 ```
-DB_NAME:
-DB_HOST:
-DB_PASS:
+DB_NAME=
+DB_HOST=
+DB_PASS=
 PORT=8080
 JWTPRIVATEKEY=
 SALT=
