@@ -1,4 +1,3 @@
-Pobrać ZIPa  
 W pliku config.json ustawić hosta i hasło bazy danych, pod które będzie łączył się serwer  
 Stworzyć plik konfiguracyjny .env i uzupełnić o dane:
 ```
